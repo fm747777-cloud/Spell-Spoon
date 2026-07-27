@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-midnight: #0F0B14;
+    --color-plum: #26152F;
+    --color-spell-pink: #E8A9C5;
+    --color-lavender: #C9B8D9;
+    --color-warm-cream: #F7EFE7;
+    --color-gold: #C9A86A;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-midnight);
+    color: var(--color-warm-cream);
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-garamond {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Custom Spell Pink glow classes */
+.glow-spell-pink {
+  box-shadow: 0 0 25px rgba(232, 169, 197, 0.25);
+}
+
+.glow-spell-pink-lg {
+  box-shadow: 0 0 45px rgba(232, 169, 197, 0.4);
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 12px rgba(232, 169, 197, 0.6);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(201, 168, 106, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26152F;
+  border-radius: 3px;
+  border: 1px solid rgba(232, 169, 197, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E8A9C5;
+}
+
+/* Animated subtle pulse for magical elements */
+@keyframes magicalPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-magical-pulse {
+  animation: magicalPulse 4s infinite ease-in-out;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s infinite ease-in-out;
+}
